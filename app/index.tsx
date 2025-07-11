@@ -1,4 +1,5 @@
 import HeaderSearch from "@/components/HeaderSearch";
+import PopularMovies from "@/components/PopularMovies";
 import { Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -10,6 +11,7 @@ export default function Index() {
           What do you want to watch?
         </Text>
         <HeaderSearch />
+        <PopularMovies />
       </View>
     </SafeAreaView>
   );
