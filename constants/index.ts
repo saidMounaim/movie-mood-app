@@ -9,3 +9,5 @@ export const images = {
   SearchBar,
   watchListBar,
 };
+
+export const categories = ["Now playing", "Popular", "Top rated", "Upcoming"];

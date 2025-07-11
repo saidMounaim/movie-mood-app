@@ -21,7 +21,7 @@ const PopularMovies = () => {
         <FlatList
           data={popularMovies.slice(0, 10)}
           horizontal
-          contentContainerClassName="gap-5 pb-16"
+          contentContainerClassName="gap-5 pb-7"
           showsHorizontalScrollIndicator={false}
           renderItem={({ item, index }) => (
             <Pressable onPress={() => router.push(`/movie/${item.id}`)}>
