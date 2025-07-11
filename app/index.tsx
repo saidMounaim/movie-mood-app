@@ -1,9 +1,16 @@
+import HeaderSearch from "@/components/HeaderSearch";
 import { Text, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
   return (
-    <View className="flex-1 items-center justify-center bg-white">
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-    </View>
+    <SafeAreaView className="flex-1 bg-dark">
+      <View className="flex flex-col gap-5 mt-3 mx-7">
+        <Text className="text-xl text-white font-poppins-semibold">
+          What do you want to watch?
+        </Text>
+        <HeaderSearch />
+      </View>
+    </SafeAreaView>
   );
 }
