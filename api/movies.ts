@@ -49,3 +49,17 @@ export const fetchMovieCredits = async (id: string) => {
   );
   return data;
 };
+
+export const fetchSearchMovies = async (query: string) => {
+  const { data } = await axios.get(
+    "https://api.themoviedb.org/3/search/movie",
+    {
+      params: {
+        api_key: process.env.EXPO_PUBLIC_API_KEY,
+        language: "en-US",
+        query,
+      },
+    }
+  );
+  return data.results;
+};
