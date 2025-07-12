@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import { images } from "@/constants";
 import { useMovieDetails, useMoviesCasts } from "@/hooks/useMovies";
+import { useWatchlistStore } from "@/store/watchlistStore";
 import cn from "clsx";
 import { router, useLocalSearchParams } from "expo-router";
 import React, { useState } from "react";
@@ -24,9 +25,19 @@ const MovieDetails = () => {
 
   if (error || id === undefined) router.push("/");
 
+  const { movies } = useWatchlistStore();
+
+  const checkIfMovieExists = () => {
+    return movies.some((movie) => movie.id === movieDetails?.id);
+  };
+
   return (
     <SafeAreaView className="flex-1 bg-dark">
-      <Header title="Detail" itemMovie={movieDetails} />
+      <Header
+        title="Detail"
+        itemMovie={movieDetails}
+        movieExists={checkIfMovieExists()}
+      />
       <ScrollView className="flex-1 bg-dark">
         {isLoading ? (
           <Text className="text-white text-center mt-5">Loading...</Text>

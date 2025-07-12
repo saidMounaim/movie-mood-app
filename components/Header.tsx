@@ -7,12 +7,13 @@ import { Image, Text, TouchableOpacity, View } from "react-native";
 interface HeaderProps {
   title: string;
   itemMovie: any;
+  movieExists: boolean;
 }
 
-const Header = ({ title, itemMovie }: HeaderProps) => {
+const Header = ({ title, itemMovie, movieExists }: HeaderProps) => {
   const router = useRouter();
 
-  const addMovie = useWatchlistStore((state) => state.addMovie);
+  const { addMovie, removeMovie } = useWatchlistStore();
 
   return (
     <View className="flex flex-row items-center justify-between py-5 px-5">
@@ -23,12 +24,19 @@ const Header = ({ title, itemMovie }: HeaderProps) => {
           resizeMode="contain"
         />
       </TouchableOpacity>
-      <Text className="text-white text-xl font-poppins-semibold">{title}</Text>
-      <TouchableOpacity onPress={() => addMovie(itemMovie)}>
+      <Text className="text-white text-xl font-poppins-semibold text-center">
+        {title}
+      </Text>
+      <TouchableOpacity
+        onPress={() =>
+          movieExists ? removeMovie(itemMovie.id) : addMovie(itemMovie)
+        }
+      >
         <Image
           source={images.watchList}
           className="w-5 h-5"
           resizeMode="contain"
+          tintColor={movieExists ? "orange" : "white"}
         />
       </TouchableOpacity>
     </View>

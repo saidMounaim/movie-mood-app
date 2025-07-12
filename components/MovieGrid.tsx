@@ -19,7 +19,7 @@ const MovieGrid = ({ category }: { category: string }) => {
         <FlatList
           data={movies}
           contentContainerClassName="flex flex-col pb-[480px]"
-          columnWrapperClassName="flex flex-row mb-5 justify-between"
+          columnWrapperClassName="flex flex-row mb-5"
           numColumns={3}
           renderItem={({ item }) => (
             <Pressable
