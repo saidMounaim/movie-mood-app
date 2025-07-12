@@ -1,50 +1,61 @@
-# Welcome to your Expo app 👋
+# 🎬 MovieMood
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**MovieMood** is a sleek, minimal mobile app built with **React Native** and **Expo**. It lets users discover and explore movies using the **TMDb API**. Enjoy a smooth and responsive interface, browse top-rated and trending titles, and manage your watchlist.
 
-## Get started
+![MovieMood Mockup](https://i.ibb.co/XfrRybK4/Minimal-Phone-Mockup-Interior-Design-Instagram-Post.png)
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## ✨ Features
 
-2. Start the app
+- 🔍 Search for movies by title
+- 🎞️ Explore popular, top-rated, upcoming, and trending movies
+- 📋 View detailed movie info (poster, overview, release date, cast)
+- 💾 Save favorite movies to your personal watchlist
+- 🧠 Powered by Zustand for state management
 
-   ```bash
-   npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## 📦 Tech Stack
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- [React Native](https://reactnative.dev/)
+- [Expo](https://expo.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Zustand](https://github.com/pmndrs/zustand) — global state management
+- [TMDb API](https://developer.themoviedb.org/) — movie data provider
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## 🛠 Getting Started
 
-When you're ready, run:
+### 1. Clone the repository
 
 ```bash
-npm run reset-project
+git clone https://github.com/saidMounaim/movie-mood-app.git
+cd movie-mood-app
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 2. Install dependencies
 
-## Learn more
+```bash
+npm install
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+### 3. Configure environment variables
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Create a `.env` file in the root:
 
-## Join the community
+```env
+EXPO_PUBLIC_API_KEY=
+```
 
-Join our community of developers creating universal apps.
+### 4. Start the development server
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```bash
+npx expo start
+```
+
+## 💼 Contribution
+
+All contributions are welcome!  
+Fork the repo, create a new branch, and submit a pull request.
