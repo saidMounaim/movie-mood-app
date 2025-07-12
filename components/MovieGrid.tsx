@@ -1,4 +1,5 @@
 import { useMovies } from "@/hooks/useMovies";
+import { router } from "expo-router";
 import React from "react";
 import {
   ActivityIndicator,
@@ -17,11 +18,14 @@ const MovieGrid = ({ category }: { category: string }) => {
       ) : (
         <FlatList
           data={movies}
-          contentContainerClassName="flex flex-col pb-[500px]"
-          columnWrapperClassName="flex flex-row justify-between"
+          contentContainerClassName="flex flex-col pb-[480px]"
+          columnWrapperClassName="flex flex-row mb-5 justify-between"
           numColumns={3}
           renderItem={({ item }) => (
-            <Pressable className="w-[32%] flex flex-col">
+            <Pressable
+              className="w-[32%] flex flex-col"
+              onPress={() => router.push(`/movie/${item.id}`)}
+            >
               <View className="w-[100px] h-[145px] relative">
                 <Image
                   source={{
